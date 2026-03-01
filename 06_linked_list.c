@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 struct node
 {
@@ -7,16 +7,17 @@ struct node
     struct node *next;
 };
 
-void linked_list_traversal(struct node *ptr){
+void linked_list_traversal(struct node *ptr)
+{
     while (ptr != NULL)
     {
-        printf("%d ",ptr->data);
+        printf("%d ", ptr->data);
         ptr = ptr->next;
     }
-    
 }
 
-int main(){
+int main()
+{
     // Allocating Memeory for nodes in Heap
     struct node *head;
     struct node *second;
@@ -28,21 +29,15 @@ int main(){
     third = (struct node *)malloc(sizeof(struct node));
     fourth = (struct node *)malloc(sizeof(struct node));
 
-
-
     head->data = 7;
     head->next = second;
-
     second->data = 25;
     second->next = third;
-
     third->data = 37;
     third->next = fourth;
-
     fourth->data = 40;
     fourth->next = NULL;
-
+    printf("Linked List Traversal:\n");
     linked_list_traversal(head);
     return 0;
 }
-
