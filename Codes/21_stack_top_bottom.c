@@ -45,7 +45,7 @@ int bottom(struct Stack *ptr){
 int main()
 {
 
-    struct Stack *s;
+    struct Stack *s = (struct Stack *)malloc(sizeof(struct Stack));
 
     s->size = 10;
     s->top = -1;

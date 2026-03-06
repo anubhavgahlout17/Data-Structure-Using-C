@@ -62,7 +62,7 @@ int pop(struct Stack *ptr)
 int main()
 {
 
-    struct Stack *s;
+    struct Stack *s = (struct Stack *)malloc(sizeof(struct Stack));
 
     s->size = 4;
     s->top = -1;

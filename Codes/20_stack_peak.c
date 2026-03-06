@@ -14,11 +14,11 @@ void push(struct stack *ptr,int value){
 }
  
 int peak(struct stack *ptr,int i){
-    int arrInd = ptr->top-i+1;
+    int arrInd = ptr->top-i+1; 
     if (arrInd < 0)
     {
         printf("Not a valid Position");
-        return -1;
+        printf("\n%d pop up from the Stack\n",pop(ptr));
     }
 
     return ptr->arr[arrInd];
@@ -32,7 +32,7 @@ int main(){
     push(sp,45);
     push(sp,35);
     push(sp,15);
-    push(sp,65);
+    push(sp,65);  
     push(sp,47);
     push(sp,44);
     push(sp,42);

@@ -29,7 +29,7 @@ int fullStack(struct Stack *ptr){
 
 int main (){
 
-    struct Stack *s;
+    struct Stack *s = (struct Stack *)malloc(sizeof(struct Stack));
 
     s->size = 4;
     s->top = -1;
@@ -56,10 +56,5 @@ int main (){
    {
     printf("Stack is not full");
    }
-   
-   
-    
-    
-    
     return 0;
 }
