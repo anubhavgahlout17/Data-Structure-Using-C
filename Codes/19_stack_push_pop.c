@@ -8,8 +8,14 @@ struct Stack
     int *arr;
 };
 
-int isempty(struct Stack *ptr)
-{
+void traversal(struct Stack *ptr){
+    for (int i = 0; i <= ptr->top; i++)
+    {
+        printf("%d ",ptr->arr[i]);
+    }
+    printf("\n");
+}
+int isempty(struct Stack *ptr){
     if (ptr->top == -1)
     {
         return 1;
@@ -19,18 +25,14 @@ int isempty(struct Stack *ptr)
         return 0;
     }
 }
-
-int isfull(struct Stack *ptr)
-{
+int isfull(struct Stack *ptr){
     if (ptr->top == ptr->size - 1)
     {
         return 1;
     }
     return 0;
 }
-
-void push(struct Stack *ptr, int value)
-{
+void push(struct Stack *ptr, int value){
 
     if (isfull(ptr))
     {
@@ -43,8 +45,7 @@ void push(struct Stack *ptr, int value)
     }
 }
 
-int pop(struct Stack *ptr)
-{
+int pop(struct Stack *ptr){
     if (isempty(ptr))
     {
         printf("Stack is Underflow\n");
@@ -58,23 +59,17 @@ int pop(struct Stack *ptr)
         return val;
     }
 }
-
-int main()
-{
-
+int main(){
     struct Stack *s = (struct Stack *)malloc(sizeof(struct Stack));
-
-    s->size = 4;
+    s->size = 5;
     s->top = -1;
     s->arr = (int *)malloc(s->size * sizeof(int));
-
     push(s, 90);
     push(s, 85);
     push(s, 97);
     push(s, 71);
-    
+    traversal(s);
     printf("Popped %d from the Stack\n",pop(s));
     printf("Popped %d from the Stack\n",pop(s));
-
     return 0;
 }

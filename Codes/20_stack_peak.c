@@ -18,7 +18,6 @@ int peak(struct stack *ptr,int i){
     if (arrInd < 0)
     {
         printf("Not a valid Position");
-        printf("\n%d pop up from the Stack\n",pop(ptr));
     }
 
     return ptr->arr[arrInd];
@@ -37,12 +36,9 @@ int main(){
     push(sp,44);
     push(sp,42);
     push(sp,40);
-
     for (int i = 1; i <= sp->top+1; i++)
     {
         printf("The value at position %d is %d\n",i,peak(sp,i));
     }
-    
-
     return 0;
 }
