@@ -34,6 +34,10 @@ struct node *insertion_at_first(struct node *head)
     ptr->prv = NULL;
     ptr->data = 14;
     ptr->next = head;
+    if (head != NULL)
+    {
+        head->prv = ptr;
+    }
     head = ptr;
     return head;
 }

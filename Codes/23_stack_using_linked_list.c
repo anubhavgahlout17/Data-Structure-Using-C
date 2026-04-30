@@ -28,6 +28,7 @@ int isFull(struct node *ptr){
     {
         return 1;
     }
+    free(n);
     return 0;
 }
 struct node *push(struct node *ptr, int val){

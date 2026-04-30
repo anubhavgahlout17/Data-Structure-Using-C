@@ -61,9 +61,8 @@ int main(){
     enqueue(q,22);
 
     dequeue(q);
-    dequeue(q);
-    dequeue(q);
-    dequeue(q);
+   
+   
 
 
     return 0;
