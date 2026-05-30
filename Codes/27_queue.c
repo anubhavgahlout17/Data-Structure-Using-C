@@ -9,6 +9,7 @@ struct Queue{
 };
 
 
+
 int isFull(struct Queue *q){
     if (q->r == q->size-1)
     {
@@ -25,6 +26,19 @@ int isEmpty(struct Queue *q){
     return 0;
 
 }
+
+void display(struct Queue *q) {
+    if (isEmpty(q)) {
+        printf("Queue is Empty\n");
+    } else {
+        printf("Queue elements: ");
+        for (int i = q->f + 1; i <= q->r; i++) {
+            printf("%d ", q->arr[i]);
+        }
+        printf("\n");
+    }
+}
+
 
 void enqueue(struct Queue *q,int val){
     if (isFull(q))

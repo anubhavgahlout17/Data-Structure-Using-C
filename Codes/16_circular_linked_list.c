@@ -18,7 +18,7 @@ void linked_list_traversal(struct node *head){
 
 struct node *insertion_at_first(struct node *head){
     struct node *ptr = (struct node *)malloc(sizeof(struct node));
-    struct node *p = head->next;
+    struct node *p = head;
     ptr->data = 2;
     while (p->next != head)
     {

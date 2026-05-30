@@ -45,19 +45,19 @@ void quickSort(int arr[],int low,int high){
     if (low<high)
     {
     partitionIndex = partition(arr,low,high);
-    display(arr,9);
+    display(arr,10);
     quickSort(arr,low,partitionIndex-1);
     quickSort(arr,partitionIndex+1,high);
     }
 }
 
 int main(){
-   int arr[] = {45,26,24,3,4,8,12,32,56};
-   int n = 9;
+   int arr[] = {45,12,78,3,56,23,89,1,67,34};
+   int n = 10;
    int low = 0;
    int high = n-1;
    quickSort(arr,low,high);
-//    display(arr,n);
+   display(arr,n);
 
     return 0;
 }
